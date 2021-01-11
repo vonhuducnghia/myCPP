@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    /*
     FILE *fptr;
     char line[100];
 
@@ -24,4 +25,17 @@ int main()
         cout << line;
     }
     fclose(fptr);
+    */
+   // convert string to integer
+   char int_value_string[] = "50";
+   int int_value = atoi(int_value_string);
+   cout << int_value << endl;
+
+   // convert string to float
+   char float_value_string[] = "4.5";
+   float float_value;
+
+   // sscanf(const char* buffer, const char* format, argument, …) dùng để đọc dữ liệu từ một chuỗi có thể xác định được định dạng của nó rồi truyền vào các đối số cần thiết
+   sscanf(float_value_string, "%f", &float_value);
+   cout << float_value;
 }
