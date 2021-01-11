@@ -17,6 +17,4 @@ int main()
 	cout << static_cast<char>(nValue) << endl;	//static_cast<type>(var) dùng để ép kiểu dữ liệu
 	// cout << strName.length() << endl;
 	// cout << strName.size() << endl;
-	cout << "Nothing changes" << endl;
-	cout << "Nothing" << endl;
 }
