@@ -18,4 +18,5 @@ int main()
 	// cout << strName.length() << endl;
 	// cout << strName.size() << endl;
 	cout << "Nothing changes" << endl;
+	cout << "Nothing" << endl;
 }
