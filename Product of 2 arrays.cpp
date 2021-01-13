@@ -21,7 +21,7 @@ int main()
          scanf("%d", &arr1[i][j]);
       }
    }
-   printf("Ma tran dau tien: \n");
+   printf("First matrix: \n");
    for (i = 0; i < m; i++)
    {
       for (j = 0; j < n; j++)
@@ -39,7 +39,7 @@ int main()
          scanf("%d", &arr2[i][j]);
       }
    }
-   printf("Ma tran thu hai: \n");
+   printf("Second matrix: \n");
    for (i = 0; i < n; i++)
    {
       for (j = 0; j < o; j++)
