@@ -10,6 +10,10 @@ int main()
 
     *&x = 20;
     cout << x << endl;
-    system("pause");
-    return 0;
+
+    int i1 = 30;
+    int &i_ref = i1;        //reference to i1, not means address of i1
+
+    cout << &i1 << endl;    //get address of i1
+    cout << &i_ref << endl; //get address of i_ref
 }
