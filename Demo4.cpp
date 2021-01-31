@@ -1,9 +1,9 @@
 #include <iostream>
+#include <stdio.h>
 using namespace std;
 
 int main()
 {
-	int x = 10;
-	cout << x << "\n";
-	cout << &x << "\n";
+	double c = 1.2;
+	cout << c << '\n' << sizeof(c) << endl;
 }
