@@ -36,6 +36,6 @@ int main()
 {
     int length;
     cin >> length;
-    float array1[length] = {1,2,3,4};
+    float array1[] = {1,2,3,4};
     cout << "Sum of elements in array: " << sum_arrayX(array1, length) << endl;
 }
