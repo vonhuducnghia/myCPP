@@ -15,15 +15,15 @@ int main()
     //printf("Location of c: %p\n", &c);
     //printf("Location of num: %p\n", &num);
     //printf("Location of flo: %p\n", &flo);
-    while (arr1[i])
+    /*while (arr1[i])
     {
         cout << arr1[i] << " at " << (void*)&arr1[i] << endl;
         i++;
-    }
-    /*char hello[] = "Hello!";
-    while(hello[i])
-    {
-        printf("%c at %p\n",hello[i],&hello[i]);
-        i++;
     }*/
+    
+    int arr2[] = {1, 2, 3, 4, 5};
+    for (int j = 0; j < 5; j++)
+    {
+        cout << arr2[j] << " at " << &arr2[j] << endl;;
+    }
 }
