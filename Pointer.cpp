@@ -136,10 +136,11 @@ int main()
     //cout << "The temperature on Friday was " << *(ptemps + fri) << endl;*/
 
     char sample[] = "From whence cometh my help?\n";
-    int index = 0;
-    while (sample[index] != '\0')
+    char *pSample;
+    pSample = sample;
+    while (*pSample)
     {
-        putchar(sample[index]);
-        index++;
+        putchar(*pSample);
+        pSample++;
     }
 }
