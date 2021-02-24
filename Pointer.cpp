@@ -104,14 +104,42 @@ int main()
         pArr3++;
     }*/
 
-    char alpha = 'A';
+    /*char alpha = 'A';
     int x;
     char *pa;
     // variable is a single char so require & prefix | pa = &<variable_name>;
-    pa = &alpha;    //initialize pointer
+    pa = &alpha;    // initialize pointer
     for(x = 0; x < 26; x++)
     {
         putchar((*pa)++);
+        //cout << (void*)pa << endl;
     }
-    putchar('\n');
+    putchar('\n');*/
+
+    /*int nArr[10] = {1, 2, 3, 4, 5 ,6 ,7 ,8 ,9, 0};
+    int *pArr;
+    int n;
+    pArr = nArr;
+    cout << "Enter the index to pull out: ";
+    cin >> n;
+    // Array Notation Replaced by Pointers
+    // alpha[n] or *(a+n)
+    cout << *(pArr + n - 1) << endl;*/
+
+    /*enum weekdays { mon, tues, wed, thurs, fri};
+    float temps[5] = { 18.7, 22.8, 25.0, 23.3, 23.2};
+    float *ptemps;
+    ptemps = temps;
+    printf("The temperature on Tuesday was %.1f\n" /*temps[tues]*///, *(ptemps + tues));
+    //printf("The temperature on Friday was %.1f\n" /*temps[fri]*///, *(ptemps + fri));
+    //cout << "The temperature on Tuesday was " << *(ptemps + tues) << endl;
+    //cout << "The temperature on Friday was " << *(ptemps + fri) << endl;*/
+
+    char sample[] = "From whence cometh my help?\n";
+    int index = 0;
+    while (sample[index] != '\0')
+    {
+        putchar(sample[index]);
+        index++;
+    }
 }
