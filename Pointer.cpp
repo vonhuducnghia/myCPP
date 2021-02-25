@@ -126,7 +126,7 @@ int main()
     // alpha[n] or *(a+n)
     cout << *(pArr + n - 1) << endl;*/
 
-    /*enum weekdays { mon, tues, wed, thurs, fri};
+    /*enum weekdays { mon, tues, wed, thurs, fri};  // enumeration (enum) function
     float temps[5] = { 18.7, 22.8, 25.0, 23.3, 23.2};
     float *ptemps;
     ptemps = temps;
