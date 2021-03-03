@@ -164,9 +164,9 @@ int main()
     strcpy(str1, "QTMteam");    // Copy string;
     puts(str1);*/
 
-    const char *pFruit[] = {"apple", "banana", "pear", "watermelon", "coconut", "grape"};
+    /*const char *pFruit[] = {"apple", "banana", "pear", "watermelon", "coconut", "grape"};
     int x = 0, i = 0;
-    /*for (x; x < 6; x++)
+    for (x; x < 6; x++)
     {
         puts(pFruit[x]);    // or puts(*(pFruit + x));
     }*/
@@ -177,11 +177,68 @@ int main()
         putchar('\n');
     }*/
 
-    for (x; x < 6; x++)
+    /*for (x; x < 6; x++)
     {
         for (i; i < 42; i++)
         {
         putchar(*(*(pFruit + x) + i));
         }
+    }*/
+
+    //Haven't figure out yet (189-201), jesus I'm fucked up!!!!!!!
+    /*char *fruit[] = {"apricot", "banana", "pineapple", "apple", "persimmon", "pear", "blueberry"};
+    char *temp;
+    int a, b, p;
+    for(a = 0; a < 6; a++)
+        for(b = a + 1; b < 7; b++)
+            if(strcmp(*(fruit + a), *(fruit + b)))
+            {
+                temp = *(fruit+a);
+                *(fruit + a) = *(fruit + b);
+                *(fruit + b) = temp;
+            }
+    for(p = 0; p < 7; p++)
+        puts(fruit[x]);*/
+
+    // Sorting
+    /*int nArr[] = {5, 87, 4, 9, 22, 63};
+    int n = 6;
+    int i, j, temp;
+    int *pArr;
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = i + 1; j < n; j++)
+        {
+            if (nArr[i] > nArr[j])
+            {
+                temp = nArr[i];
+                nArr[i] = nArr[j];
+                nArr[j] = temp;
+            }
+        }
     }
+    pArr = nArr;
+    cout << "Sorting: ";
+    for (i = 0; i < n; i++)
+    {
+        cout << nArr[i] << '\t';
+    }
+    cout  << '\n';*/
+    /*while (*pArr)
+    {
+        cout << *pArr << '\t';
+        pArr++;
+    }*/
+    int i, n, *x;
+    printf("nhap vao n: ");
+    scanf("%d", &n);
+    x = (int*)malloc(n);
+    for(i = 0; i < n; i++)
+    {
+        printf("nhap vao phan tu thu %d: ", i + 1);
+        scanf("%d", (x + i));
+    }
+    for(i = 0; i < n; i++)
+    printf("%4d", *(x + i));
+    free(x);
 }
