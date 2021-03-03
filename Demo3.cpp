@@ -6,7 +6,7 @@ int main()
     char str[60];
 
     // open a file
-    fp = fopen("Demo.txt", "r");
+    fp = fopen("a.txt", "r");
     if (fp == NULL)
     {
         perror("Error occured when opened file");
