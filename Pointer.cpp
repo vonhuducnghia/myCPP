@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
+#include <stdlib.h>
 using namespace std;
 
 // NOTATION:
@@ -230,12 +231,12 @@ int main()
         pArr++;
     }*/
     int i, n, *x;
-    printf("nhap vao n: ");
+    printf("Enter size n: ");
     scanf("%d", &n);
-    x = (int*)malloc(n);
+    x = (int*)malloc(n * sizeof(int));
     for(i = 0; i < n; i++)
     {
-        printf("nhap vao phan tu thu %d: ", i + 1);
+        printf("Enter the th element %d: ", i + 1);
         scanf("%d", (x + i));
     }
     for(i = 0; i < n; i++)
