@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <iostream>
+#include <string.h>
 using namespace std;
 
 // NOTATION:
@@ -135,12 +136,52 @@ int main()
     //cout << "The temperature on Tuesday was " << *(ptemps + tues) << endl;
     //cout << "The temperature on Friday was " << *(ptemps + fri) << endl;*/
 
-    char sample[] = "From whence cometh my help?\n";
+    /*char sample[] = "From whence cometh my help?\n";
     char *pSample;
+    int index = 0;
     pSample = sample;
+    while (sample[index] != 0)
+    {
+        putchar(sample[index]);
+        index++;
+    }
     while (*pSample)
     {
         putchar(*pSample);
         pSample++;
+    }*/
+
+    // Using a pointer to declare a string
+    /*const char *pStr = "From whence cometh my help?\n";     // You cannot use this convention to initialize a numeric array.
+
+    // This is a pointer to a constant character.
+    //You cannot change the value pointed by ptr, but you can change the pointer itself.
+    //“const char *” is a (non-const) pointer to a const char.
+
+    puts(pStr);     // Function: int puts(const char *str)
+
+    char str1[15];
+    strcpy(str1, "QTMteam");    // Copy string;
+    puts(str1);*/
+
+    const char *pFruit[] = {"apple", "banana", "pear", "watermelon", "coconut", "grape"};
+    int x = 0, i = 0;
+    /*for (x; x < 6; x++)
+    {
+        puts(pFruit[x]);    // or puts(*(pFruit + x));
+    }*/
+
+    /*for (x; x < 6; x++)
+    {
+        putchar(**(pFruit+x));
+        putchar('\n');
+    }*/
+
+    for (x; x < 6; x++)
+    {
+        for (i; i < 42; i++)
+        {
+        putchar(*(*(pFruit + x) + i));
+        }
     }
 }
