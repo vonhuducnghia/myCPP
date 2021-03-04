@@ -230,7 +230,8 @@ int main()
         cout << *pArr << '\t';
         pArr++;
     }*/
-    int i, n, *x;
+
+    /*int i, n, *x;
     printf("Enter size n: ");
     scanf("%d", &n);
     x = (int*)malloc(n * sizeof(int));
@@ -241,5 +242,5 @@ int main()
     }
     for(i = 0; i < n; i++)
     printf("%4d", *(x + i));
-    free(x);
+    free(x);*/
 }
