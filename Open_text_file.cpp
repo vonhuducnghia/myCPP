@@ -53,7 +53,6 @@ int main()
         cout << "ERROR, NO SUCH FILE IN DIRECTORY";
         exit(1);
     }
-    
     // ignore the first line
     fscanf(fptr, "%[^\n]\n", line);
 
