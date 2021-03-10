@@ -11,6 +11,16 @@ YOU WILL NOT
 
 Be formally educated on C++
 Master C++ as a programming language
+
+YOU WILL
+
+Data abstraction
+Encapsulation
+Information hiding
+Polymorphism
+Inheritance
+
+Using C++ to describe ideas
 */
 
 #include <iostream>
@@ -20,5 +30,5 @@ using std::endl;
 
 int main()
 {
-    
+
 }
