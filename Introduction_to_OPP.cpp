@@ -27,8 +27,37 @@ Using C++ to describe ideas
 using std::cout;
 using std::cin;
 using std::endl;
+using std::cerr;
+
+/*
+
+Buffered (cin, cout)
+Unbuffered (cerr)
+Buffered characters should be flushed
+Unbuffered characters can be seen immediately
+
+*/
+int f(int *x, int *y);
+int j(int x, int y);
 
 int main()
 {
-    
+    int a = 10, b = 2, c, e;
+    c = f( &a, &b);
+    e = j( a, b);
+    cout << a << '\t' << b << '\t' << c << endl;
+}
+
+int f(int *x, int *y)
+{
+    *x += 5;
+    *y += 3;
+    return *x + *y;
+}
+
+int j(int x, int y)
+{
+    x += 5;
+    y += 3;
+    return x + y;
 }
