@@ -104,12 +104,13 @@ int factorial(int n)
 
 int main()
 {
-    double a = 10.37, b = 2.45;
+    double a = 10.37, b = 2.45, c = 4;
     //c = f( &a, &b);
     //e = j( a, b);
     swapstr A = swapsf (a, b);
     cout << A.x << endl;
     cout << A.y << endl;
+    cout << factorial(c) << endl;
 }
 
 // Exercise 4 | Working on it
