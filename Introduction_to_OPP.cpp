@@ -24,12 +24,12 @@ Using C++ to describe ideas
 */
 
 #include <iostream>
-#include <tuple>
+//#include <tuple>
 using std::cout;
 using std::cin;
 using std::endl;
-using std::cerr;
-using std::make_tuple;
+//using std::cerr;
+//using std::make_tuple;
 
 /*
 
@@ -80,6 +80,28 @@ swapstr swapsf (double x, double y)
     return A;
 }
 
+void swap_2(double *x, double *y)
+{
+    double temp = *x;
+    *x = *y; 
+    *y = temp;
+
+}
+
+// Exercise 2
+
+int factorial(int n)
+{
+    if(n == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return n*factorial(n-1);
+    }
+}
+
 int main()
 {
     double a = 10.37, b = 2.45;
@@ -89,3 +111,5 @@ int main()
     cout << A.x << endl;
     cout << A.y << endl;
 }
+
+// Exercise 4 | Working on it
