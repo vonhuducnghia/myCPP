@@ -2,6 +2,9 @@
 using std::cout;
 using std::endl;
 
+/* NOTATION
+<<, >>, >>>
+*/
 int main()
 {
     int x, y;
