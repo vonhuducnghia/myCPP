@@ -24,10 +24,12 @@ Using C++ to describe ideas
 */
 
 #include <iostream>
+#include <tuple>
 using std::cout;
 using std::cin;
 using std::endl;
 using std::cerr;
+using std::make_tuple;
 
 /*
 
@@ -37,17 +39,6 @@ Buffered characters should be flushed
 Unbuffered characters can be seen immediately
 
 */
-int f(int *x, int *y);
-int j(int x, int y);
-
-int main()
-{
-    int a = 10, b = 2, c, e;
-    c = f( &a, &b);
-    e = j( a, b);
-    cout << a << '\t' << b << '\t' << c << endl;
-}
-
 int f(int *x, int *y)
 {
     *x += 5;
@@ -63,6 +54,38 @@ int j(int x, int y)
 }
 
 /*
-POINTER
+POINTER | ARRAY
 
+The 'new' opereator is used to allocate memory dynamically.
+The 'delete' operator is used to deallocate memory space.
+Ragged Array
 */
+
+// Exercise 3
+
+struct swapstr
+{
+    double x;
+    double y;
+};
+
+
+swapstr swapsf (double x, double y)
+{
+    swapstr A;
+    double temp = 0;
+    temp = x;
+    A.x = y;
+    A.y = temp;
+    return A;
+}
+
+int main()
+{
+    double a = 10.37, b = 2.45;
+    //c = f( &a, &b);
+    //e = j( a, b);
+    swapstr A = swapsf (a, b);
+    cout << A.x << endl;
+    cout << A.y << endl;
+}
