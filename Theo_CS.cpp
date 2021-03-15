@@ -25,11 +25,12 @@ int main()
     }
 
 // Output all prefixes and suffixes
+    cout << "Output prefixes string" << endl;
     for (int i = 0; i <= lenstr; i++)
     {
         cout << sTr.substr(0, i) << endl;
     }
-
+    cout << "Output suffixes string" << endl;
     for (int i = 0; i <= lenstr; i++)
     {
         cout << sTr.substr(lenstr - i, i) << endl;
