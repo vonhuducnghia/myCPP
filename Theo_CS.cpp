@@ -17,9 +17,17 @@ int main()
     cout << "Enter substring length: ";
     cin >> sublen;
 
+// Output substring at index has length
     indxsub = indx1 + sublen;
     for (indx1; indx1 < indxsub; indx1++)
     {
         cout << sTr[indx1];
+    }
+
+// Output all prefixes and suffixes
+    for (int j = 0; j < )
+    for (int i = 0; i + 1 < lenstr; i++)
+    {
+        cout << sTr[i];
     }
 }
