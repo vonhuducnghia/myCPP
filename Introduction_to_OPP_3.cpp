@@ -2,7 +2,7 @@
 using namespace std;
 
 // Demo for Parameterised Constructor
-class Mayvitinh
+/*class Mayvitinh
 { 
     int chieurong;   
     int chieudai; 
@@ -26,15 +26,58 @@ class Mayvitinh
             cout << "   Chieu dai: " << chieudai << endl;
             cout << "   Chieu rong: " << chieurong << endl;
        }    
-};  
-  
+};*/
+
+class fractionwith
+{
+     int numer, deno, Ngcd;
+     public:
+
+     fractionwith()
+     {
+          numer = 1;
+          deno = 1;
+     }
+
+     fractionwith(int ginumer, int gideno)
+     {
+          numer = ginumer;
+          deno = gideno;
+     }
+
+     // GCD function
+     int gcd(int numer, int deno)
+     {
+          if (deno == 0)
+          {
+               return numer;
+          }
+          Ngcd = gcd(deno, numer % deno);
+          return Ngcd;
+     }
+
+     void  Display()
+     {
+          if (Ngcd == 1)
+          {
+               cout << numer << '/' << deno;
+          }
+          else
+          {
+               cout << numer/Ngcd << '/' << deno/Ngcd;
+          }
+     }
+};
+
 int main()
 {  
-    Mayvitinh mayAsus =  Mayvitinh(50, "may Asus", 25);    
+    /*Mayvitinh mayAsus =  Mayvitinh(50, "may Asus", 25);    
     Mayvitinh mayAcer =  Mayvitinh(45, "mau Acer");
     Mayvitinh mayMac =  Mayvitinh(30, "may Mac");
     mayAsus.HienThi();    
     mayAcer.HienThi();
-    mayMac.HienThi();
+    mayMac.HienThi();*/
+    fractionwith no1 = fractionwith(3, 15);
+    no1.Display();
     return 0;
 }
