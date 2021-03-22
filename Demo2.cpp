@@ -14,5 +14,4 @@ int main()
 {
     int a = 11, b = 7;
     cout<<"GCD of "<<a<<" and "<<b<<" is "<<gcd(a, b);
-    return 0;
 }

@@ -1,6 +1,7 @@
 #include <iostream>  
 using namespace std;
 
+int Ngcd = 0;
 // Demo for Parameterised Constructor
 /*class Mayvitinh
 { 
@@ -27,10 +28,19 @@ using namespace std;
             cout << "   Chieu rong: " << chieurong << endl;
        }    
 };*/
+int gcd(int numer, int deno)
+{
+     if (deno == 0)
+     {
+          return numer;
+     }
+     Ngcd = gcd(deno, numer % deno);
+     return Ngcd;
+}
 
 class fractionwith
 {
-     int numer, deno, Ngcd;
+     int numer, deno;
      public:
 
      fractionwith()
@@ -43,17 +53,6 @@ class fractionwith
      {
           numer = ginumer;
           deno = gideno;
-     }
-
-     // GCD function
-     int gcd(int numer, int deno)
-     {
-          if (deno == 0)
-          {
-               return numer;
-          }
-          Ngcd = gcd(deno, numer % deno);
-          return Ngcd;
      }
 
      void  Display()
