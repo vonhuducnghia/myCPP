@@ -81,7 +81,7 @@ void execute()
     int choice;
     do
     {
-        system ("cls");
+        system("cls");
         cout << "--STUDENT MANAGING SYSTEM--" << endl;
     	cout<<"\t1. Add Records to File\n";
 		cout<<"\t2. List Records From File\n";
@@ -90,7 +90,16 @@ void execute()
 		cout<<"\t5. Search Records From File\n";
 		cout<<"\n\t Please choose an option: ";
 		cin>>choice;
-    } while (choice);
+
+        system("cls");
+        switch(choice)
+        {
+            case 1: addData(); break;
+            case 2: listData(); break;
+        }
+        system("pause");
+    }
+    while(choice);
 }
 
 int main()
