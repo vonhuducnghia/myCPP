@@ -59,7 +59,7 @@ void addData()
     ofstream fileout;
     fileout.open("student.bat", ios::binary | ios::out | ios::app);
     s.input_data();
-    fileout.write((char)*&s, sizeof(s));
+    fileout.write((char*)&s, sizeof(s));
     fileout.close();
     cout << "File is successfully saved." << endl;
 }
@@ -68,7 +68,7 @@ void listData()
 {
     ifstream filein;
     filein.open("student.bat", ios::binary | ios::in);
-    while (filein.read((char)*&s, sizeof(s)))
+    while (filein.read((char*)&s, sizeof(s)))
     {
         s.display_data();
     }
