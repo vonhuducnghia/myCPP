@@ -30,7 +30,7 @@ void student::input_data()
     cout << "Enter student ID: ";
     cin >> std_ID;
     cout << "First name: ";
-    cin.ignore();
+    cin.ignore();   // erase buffed memory from std_ID
     cin.getline(first_name, 20);
     cout <<"Last name ";
     cin.getline(last_name, 20);
