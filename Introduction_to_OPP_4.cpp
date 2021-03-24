@@ -24,13 +24,15 @@ class student
     }
 }s;
 
+
+// Using cin.getline() to input character.
 void student::input_data()
 {
     cout << "Enter student details" << endl;
     cout << "Enter student ID: ";
     cin >> std_ID;
     cout << "First name: ";
-    cin.ignore();   // erase buffed memory from std_ID
+    cin.ignore();   // erase buffed memory from std_ID.
     cin.getline(first_name, 20);
     cout <<"Last name ";
     cin.getline(last_name, 20);
@@ -43,6 +45,7 @@ void student::input_data()
     cout << endl;
 }
 
+// Making an output for class 'student'.
 void student::display_data()
 {
     cout << "Student details--" << endl;
@@ -54,6 +57,7 @@ void student::display_data()
     cout << "Student GPA: " << GPA << endl;
 }
 
+// Using ios::app to add data after another.
 void addData()
 {
     ofstream fileout;
