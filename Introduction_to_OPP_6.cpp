@@ -1,5 +1,5 @@
 /*
-Impliment Matrix
+Implement Matrix
 - data
 - constructors
 - Deconstructors
