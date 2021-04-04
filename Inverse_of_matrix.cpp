@@ -497,11 +497,12 @@ std::ostream& operator <<(std::ostream &os, const CMatrix &m)
 #endif
 int main()
 {
-    CMatrix a("A", 6, 6);
+    CMatrix a("A", 3, 3);
     //std::cin >> a;
     a.FillSimulatedInput();
     CMatrix aadj = a.Inverse();
     std::cout << a;
+    std::cout << a.Determinant();
     std::cout << aadj;
     CMatrix unit = (a * aadj);
     unit.SetName("A * A-Inv");
