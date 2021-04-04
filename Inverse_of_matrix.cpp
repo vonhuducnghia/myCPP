@@ -497,7 +497,7 @@ std::ostream& operator <<(std::ostream &os, const CMatrix &m)
 #endif
 int main()
 {
-    CMatrix a("A", 5, 5);
+    CMatrix a("A", 6, 6);
     //std::cin >> a;
     a.FillSimulatedInput();
     CMatrix aadj = a.Inverse();
