@@ -64,6 +64,8 @@ class CMatrix
         {
             std::cin >> *this;
         }
+
+        // Fill random number for input
         void FillSimulatedInput()
         {
             static int factor1 = 1, factor2 = 2;
