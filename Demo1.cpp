@@ -4,12 +4,7 @@ using namespace std;
 
 int main()
 {
-    string str;
-    int a;
-    string b;
-    cin >> str;
-    a = str.length();
-    b = str.substr(1, 4);
-    cout << a << endl;
-    cout << b << endl;
+    int a, b = 1;
+    a = b << 3;
+    cout << a;
 }
