@@ -46,6 +46,17 @@ void BankAccount::viewData()
     cout << endl;
 }
 
+void ModifyBalance(double newValue)
+{
+    Balance = newValue;
+}
+
+double newBalance()
+{
+    return newValue;
+}
+};
+/*
 void ModifyBalance()
 {
 	int n;
@@ -76,7 +87,33 @@ void ModifyBalance()
 	if(flag == 0)
 		cout << "The Student ID " << n << " not found.\n\n";
 }
+*/
+
+void addData()
+{
+	ofstream fout;
+	fout.open("Clients.dat",ios::binary|ios::out|ios::app);
+	s.getData();
+	fout.write((char*)&s,sizeof(s));
+	fout.close();
+	cout<<"\nData Successfully Saved to File.\n";
+}
+
+void listData()
+{
+	ifstream fin;
+	fin.open("Clients.dat",ios::in|ios::binary);
+	while(fin.read((char*)&s,sizeof(s)))
+	{
+		s.viewData();
+	}
+	fin.close();
+	cout<<"\nData Reading from File Successfully Done.\n";
+}
 
 int main()
 {
+    BankAccount Client;
+    Client.getData();
+    Client.viewData
 }
