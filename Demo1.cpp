@@ -14,13 +14,24 @@ class BankAccount
     char CustomerAddr[50];
     char AccOpenDate[10];   // input in form dd.mm.yyyy
     double Balance;
+    double nBalance;
 
     public:
     void getData();
     void viewData();
-    void DisplayInfo()
+    int DisplayInfo()
     {
         return CustomerID;
+    }
+
+    void ModifyBalance(double newValue)
+    {
+        Balance = newValue;
+    }
+
+    double newBalance()
+    {
+        return Balance;
     }
 }s;
 
@@ -46,16 +57,6 @@ void BankAccount::viewData()
     cout << endl;
 }
 
-void ModifyBalance(double newValue)
-{
-    Balance = newValue;
-}
-
-double newBalance()
-{
-    return newValue;
-}
-};
 /*
 void ModifyBalance()
 {
@@ -89,7 +90,7 @@ void ModifyBalance()
 }
 */
 
-void addData()
+/*void addData()
 {
 	ofstream fout;
 	fout.open("Clients.dat",ios::binary|ios::out|ios::app);
@@ -109,11 +110,17 @@ void listData()
 	}
 	fin.close();
 	cout<<"\nData Reading from File Successfully Done.\n";
-}
+}*/
 
 int main()
 {
+    double value;
     BankAccount Client;
+    cout << "Enter client data: " << endl;
     Client.getData();
-    Client.viewData
+    cout << "View client data: " << endl;
+    Client.viewData();
+    cout << "Balance modified value: "; cin >> value;
+    Client.ModifyBalance(value);
+    Client.viewData();
 }
