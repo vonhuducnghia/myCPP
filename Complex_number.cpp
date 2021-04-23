@@ -2,14 +2,14 @@
 using namespace std;
 class complex
 {
-   int real, img;
+   double real, img;
    public:
       complex()
       {
          //default constructor to initialize complex number to 0+0i
          real = 0; img = 0;
       }
-      complex(int r, int i)
+      complex(double r, double i)
       {
          //parameterized constructor to initialize complex number.
          real = r; img = i;
@@ -63,7 +63,7 @@ complex sub(complex c1, complex c2)
 int main()
 {
     // Testing
-    complex n1(1, 7), n2(3, 4);
+    complex n1(1.5, 7), n2(3, 4);
     complex result;
     n1.display();
     result = add(n1, n2);
