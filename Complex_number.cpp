@@ -63,8 +63,9 @@ complex sub(complex c1, complex c2)
 int main()
 {
     // Testing
-    complex n1(1, -7), n2(3, 4);
+    complex n1(1, 7), n2(3, 4);
     complex result;
+    n1.display();
     result = add(n1, n2);
     result.display();
 }
