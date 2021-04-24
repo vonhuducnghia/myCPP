@@ -8,7 +8,9 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                "C:\\Users\ASUS\Downloads\\eigen-3.3.9\\"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

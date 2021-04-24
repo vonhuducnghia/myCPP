@@ -5,25 +5,52 @@ using namespace std;
 
 class YoutubeChannels
 {
-    public:
+    private:
     string Name;
     string OwnerName;
     int SubcribersCount;
+
+    public:
     list<string> PublishedVideos; // Make a list of string (or any list of data type), ex: {"name1", "name2", "etc"}
+
+    YoutubeChannels(string name, string ownerName)
+    {
+        Name = name;
+        OwnerName = ownerName;
+        SubcribersCount = 0;
+    }
+
+    void getinfo()
+    {
+        cout << "Name: " << Name << endl;
+        cout << "Name: " << OwnerName << endl;
+        cout << "Playlist: ";
+        for (string Playlist : PublishedVideos) // Syntax to display an object list
+        {
+            cout << Playlist << '\t';
+        }
+    }
 };
 
 int main()
 {
-    YoutubeChannels myChannels;
-    myChannels.Name = "IreneAdler";
-    myChannels.OwnerName = "Nghia";
-    myChannels.SubcribersCount = 39;
-    myChannels.PublishedVideos = {"LoL", "Overwatch", "CS:GO"};
-    cout << "Name: " << myChannels.Name << endl;
+    YoutubeChannels myChannels("IreneAdler", "Nghia");
+    myChannels.PublishedVideos.push_back("LoL");
+    myChannels.PublishedVideos.push_back("Overwatch");
+    myChannels.PublishedVideos.push_back("CSGO");
+
+    /*YoutubeChannels myChannels;
+    Name = "IreneAdler";
+    OwnerName = "Nghia";
+    SubcribersCount = 39;
+    PublishedVideos = {"LoL", "Overwatch", "CS:GO"};*/
+    /*cout << "Name: " << Name << endl;
+    cout << "Name: " << OwnerName << endl;
     cout << "Playlist: ";
-    for (string Playlist : myChannels.PublishedVideos) // Syntax to display an object list
+    for (string Playlist : PublishedVideos) // Syntax to display an object list
     {
         cout << Playlist << '\t';
-    }
-    //system("pause > 0");
+    }*/
+    myChannels.getinfo();
+    system("pause > 0");
 }
