@@ -52,5 +52,5 @@ int main()
         cout << Playlist << '\t';
     }*/
     myChannels.getinfo();
-    system("pause > 0");
+    //system("pause > 0");
 }
