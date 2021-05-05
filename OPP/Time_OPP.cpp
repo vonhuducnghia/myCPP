@@ -36,7 +36,7 @@ class Time
         hours = -hours;
         minutes = -minutes;
         seconds = -seconds;
-        return(hours, minutes, seconds);
+        return new Time(hours, minutes, seconds);
     }
 
     // Overloaded operator >
@@ -75,9 +75,9 @@ Time Time::operator + (Time temp)
 Time operator + (const Time &obj)
 {
     Time res;
-    res.hours = this->hours + res.hours;
-    res.minutes = this->minutes + res.minutes;
-    res.seconds = this->seconds + res.seconds;
+    res.hours = this->hours + obj.hours;
+    res.minutes = this->minutes + obj.minutes;
+    res.seconds = this->seconds + obj.seconds;
     return res;
 }*/
 
