@@ -71,15 +71,15 @@ Time Time::operator + (Time temp)
     return res;
 }
 
-    // Another option for Overloaded operator
-    // Time operator - (const Time &obj)
-    // {
-    //     Time res;
-    //     res.hours = this->hours - res.hours;
-    //     res.minutes = this->minutes - res.minutes;
-    //     res.seconds = this->seconds - res.seconds;
-    //     return res;
-    // }
+/*Another option for Overloaded operator
+Time operator + (const Time &obj)
+{
+    Time res;
+    res.hours = this->hours + res.hours;
+    res.minutes = this->minutes + res.minutes;
+    res.seconds = this->seconds + res.seconds;
+    return res;
+}*/
 
 void Time::setTime()
 {
