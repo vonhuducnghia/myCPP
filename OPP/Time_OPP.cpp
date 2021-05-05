@@ -11,7 +11,7 @@ class Time
 
     public:
     // Default constructor
-    Timedf()
+    Time()
     {
         hours = 0;
         minutes = 0;
@@ -19,7 +19,7 @@ class Time
     }
 
     // Parameter constructor
-    TimePara(int hr, int min, int sec)
+    Time(int hr, int min, int sec)
     {
         hours = hr;
         minutes = min;
@@ -31,17 +31,42 @@ class Time
         cout<< hours << ":" << minutes << ":" << seconds;
     }
     Time operator + (Time);
+    Time operator - ()
+    {
+        hours = -hours;
+        minutes = -minutes;
+        seconds = -seconds;
+        return(hours, minutes, seconds);
+    }
+
+    // Overloaded operator >
+    bool operator > (const Time& t)
+    {
+        if (hours > t.hours)
+        {
+            return true;
+        }
+        if (hours == t.hours && minutes > t.minutes)
+        {
+            return true;
+        }
+        if (hours == t.hours && minutes == t.minutes && seconds > t.seconds)
+        {
+            return true;
+        }
+        return false;
+    }
 };
 
-Time Time::operator + (Time t1)
+Time Time::operator + (Time temp)
 {
     Time res;
     int a, b;
-    a = seconds + t1.seconds;
+    a = seconds + temp.seconds;
     res.seconds = a%60;
-    b = (a/60) + minutes + t1.minutes;
+    b = (a/60) + minutes + temp.minutes;
     res.minutes = b%60;
-    res.hours = (b/60) + hours + t1.hours;
+    res.hours = (b/60) + hours + temp.hours;
     res.hours = res.hours % 24;
     return res;
 }
