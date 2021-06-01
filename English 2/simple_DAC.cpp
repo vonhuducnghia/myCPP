@@ -15,12 +15,10 @@ class ACM
     public:
     ACM(int N)
     {
-
     for(int i = 0; i < N; i++)
     {
         matrix[i] = new string [3];
     }
-
         for(int i = 0; i < N; i++)
         {
             for(int j = 0; j < 3; j++)
