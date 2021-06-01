@@ -35,7 +35,7 @@ class Bob : public file1
     subject = "bob";
     action = {"execute"};
     }
-}
+};
 
 class Macro : public file1
 {
@@ -47,7 +47,7 @@ class Macro : public file1
     subject = "macro";
     action = {"read"};
     }
-}
+};
 // Class for file 2
 class file2
 {
@@ -107,6 +107,19 @@ class Mary : public file2
     }
 };
 
+bool file1::Determine(name, oper, file)
+{
+    if (name == subject && oper == action && file == object)
+    {
+        return true;
+    }
+    return false;
+}
+
 int main()
 {
+    string subject, action, object;
+    cin >> subject >> action >> object;
+    file1 deter;
+    deter.Determine(subject, action, object);
 }
