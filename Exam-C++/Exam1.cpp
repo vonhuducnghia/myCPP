@@ -12,12 +12,12 @@ class Employee
     void display_data();
 }s;
 
-class Manager : private Employee
+class Manager : public Employee
 {
-    public:
-    void input_data();
-    void display_data();
-}s;
+    private:
+    int EmployeeID;
+    char EmployeeName[20], Gender[10], DepartmentID[10];
+};
 
 void Employee::input_data()
 {
@@ -48,4 +48,6 @@ int main()
     ID.input_data();
     cout << "Employee info: " << endl;
     ID.display_data();
+    cout << endl;
+    
 }
