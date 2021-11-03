@@ -12,6 +12,13 @@ class Employee
     void display_data();
 }s;
 
+class Manager : private Employee
+{
+    public:
+    void input_data();
+    void display_data();
+}s;
+
 void Employee::input_data()
 {
     cout << "Employee details: " << endl;
