@@ -48,6 +48,4 @@ int main()
     ID.input_data();
     cout << "Employee info: " << endl;
     ID.display_data();
-    cout << endl;
-    
 }
