@@ -42,6 +42,7 @@ bool Complex::operator==(const Complex c1)
 int main()
 {
    Complex a, b, c;
+   
    cout << "Enter real and complex coefficient of the first complex number: " << endl;
    cin >> a.real;
    cin >> a.imag;
@@ -50,7 +51,9 @@ int main()
    cin >> b.real;
    cin >> b.imag;
 
+   bool d = (a == b);
    cout << "Addition Result: ";
    c = a + b;
    c.display();
+   cout << d;
 }
