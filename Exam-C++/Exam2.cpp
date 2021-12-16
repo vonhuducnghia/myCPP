@@ -5,8 +5,11 @@ using namespace std;
 class TwoDShape
 {
     public:
-    double getPerimeter();
-}
+    double getPerimeter()
+    {
+        cout << perimeter << endl;  
+    }
+};
 
 class Circles : public TwoDShape
 {
@@ -21,7 +24,6 @@ class Circles : public TwoDShape
         j = i;
     }
     return perimeter;
-}
 };
 
 class Rectangles : public TwoDShape
