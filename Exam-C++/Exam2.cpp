@@ -21,7 +21,7 @@ double Circles::findShapeperimeter()
     double perimeter = 0.0;
     perimeter = radius * 2 * 3.141;
 }
-void TwoDShape::print()
+void Circles::print()
 {
     cout << "Perimeter: " << perimeter << endl;
 }
