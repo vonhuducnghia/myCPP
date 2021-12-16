@@ -5,23 +5,23 @@ using namespace std;
 class TwoDShape
 {
     public:
-    double perimeter;
-    void display_perimeter();
-    double Circle();
-    double Rectangle();
-    double Square();
-    double Triangle();
-}s;
-
-void TwoDShape::display_perimeter()
-{
-    cout << perimeter << endl;
+    double getPerimeter();
 }
 
 class Circles : public TwoDShape
 {
-    private:
-    double x, y, radius;
+    public:
+    double findShapeperimeter(double cord[][2], int n)
+    {
+   
+        double perimeter = 0.0;
+        int j = n - 1;
+        for (int i = 0; i < n; i++) {
+        perimeter += sqrt((cord[j][0] - cord[i][0]) * (cord[j][0] - cord[i][0]) + (cord[j][1] - cord[i][1]) * (cord[j][1] - cord[i][1]));
+        j = i;
+    }
+    return perimeter;
+}
 };
 
 class Rectangles : public TwoDShape

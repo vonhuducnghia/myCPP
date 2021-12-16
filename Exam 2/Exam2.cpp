@@ -1,15 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-double findShapeperimeter(double cord[][2], int n) {
+double findShapeperimeter(double cord[][2], int n)
+{
    
-   double perimeter = 0.0;
-   int j = n - 1;
-   for (int i = 0; i < n; i++) {
-      perimeter += sqrt((cord[j][0] - cord[i][0]) * (cord[j][0] - cord[i][0]) + (cord[j][1] - cord[i][1]) * (cord[j][1] - cord[i][1]));
-      j = i;
-   }
-   return perimeter;
+    double perimeter = 0.0;
+    int j = n - 1;
+    for (int i = 0; i < n; i++)
+    {
+        perimeter += sqrt((cord[j][0] - cord[i][0]) * (cord[j][0] - cord[i][0]) + (cord[j][1] - cord[i][1]) * (cord[j][1] - cord[i][1]));
+        j = i;
+    }
+    return perimeter;
 }
 
 int main()
