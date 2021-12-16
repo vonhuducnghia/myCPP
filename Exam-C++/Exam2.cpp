@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -33,7 +33,7 @@ int main()
     c1.print();
 }
 
-/*class Rectangles : public TwoDShape
+class Rectangles : public TwoDShape
 {
     private:
 };

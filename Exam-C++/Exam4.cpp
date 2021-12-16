@@ -15,13 +15,21 @@ void display() const;
 //overloading operators
 Complex operator+(const Complex);
 bool operator==(const Complex);
+//Complex operator=(const Complex);
 };
 void Complex::display() const    //Note that the definition of a function must match the prototype. I.e.
 {
    if(imag < 0)
-   cout << real << imag << "i" << '\n';
-   else
-   cout << real << '+' << imag << "i" << '\n';
+      if(imag == -1)
+         cout << "The complex number is: "<< real << " - i" << endl;
+      else
+         cout << "The complex number is: "<< real << imag << "i" << endl;
+      else
+         if(imag == 1)
+            cout << "The complex number is: "<< real << " + i"<< endl;
+         else
+            cout << "The complex number is: "<< real << " + " << imag << "i" <<
+   endl;
 }
 Complex Complex::operator+(const Complex c1)
 {
@@ -39,9 +47,16 @@ bool Complex::operator==(const Complex c1)
   else
   return false;
 }
+/*Complex Complex::operator=(const Complex c1)
+{
+   Complex temp;
+   temp.real = c1.real;
+   temp.imag = c1.imag;
+   return temp;
+}*/
 int main()
 {
-   Complex a, b, c;
+   Complex a, b, c, f;
    
    cout << "Enter real and complex coefficient of the first complex number: " << endl;
    cin >> a.real;
@@ -51,9 +66,18 @@ int main()
    cin >> b.real;
    cin >> b.imag;
 
+   cout << "Enter real and complex coefficient of the third complex number: " << endl;
+   cin >> f.real;
+   cin >> f.imag;
+
+   cout << "Comparison 2 complex numbers (1 is true, 0 is false): ";
    bool d = (a == b);
-   cout << "Addition Result: ";
+   cout << d << endl;
+   cout << "Addition Result:\n";
    c = a + b;
    c.display();
-   cout << d;
+   cout << "\nAssign a complex number:\n";
+   f = a;
+   f.display();
+   
 }
