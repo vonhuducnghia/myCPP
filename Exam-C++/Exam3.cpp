@@ -4,7 +4,7 @@
 using namespace std;
 
 template <typename T>
-    void sum1(T x, T &sum, int n)
+    void sum_computation(T x, T &sum, int n)
     {
         T multi = x;
         int i;
@@ -23,7 +23,7 @@ int main()
     cin >> x;
     cout << "Input range n: ";
     cin >> n;
-    sum1(x, sum, n);
+    sum_computation(x, sum, n);
     cout << sum;
     return 0;
 }
